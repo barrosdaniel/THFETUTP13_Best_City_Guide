@@ -31,6 +31,7 @@ h1,
 h2,
 h3 {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 a {
@@ -77,18 +78,23 @@ img {
 .banner {
   color: #fff;
   background: #3acec2;
+  padding: 2em;
+  text-align: center;
 }
 
 .main-footer {
   background: #d9e4ea;
   padding: 2em 0;
-  margin-top: 30px;
+  text-align: center;
 }
 
 /* ---- Page Elements ---- */
-
 .logo {
   width: 190px;
+}
+
+.col {
+  padding: 1em;
 }
 
 /* ================================= 
@@ -103,6 +109,9 @@ img {
     margin: 0 auto;
   }
 
+
+
+  /* ---- Header ---- */
   .main-header {
     padding: 1em;
     text-align: left;
@@ -130,12 +139,44 @@ img {
   }
 
 
+
+  /* ---- Banner ---- */
+  /* No styles */
+
+
+
+  /* ---- Main ---- */
+  .secondary,
+  .primary {
+    float: left;
+    width: 50%;
+  }
+
+  .tertiary {
+    clear: both;
+  }
+
+
   /* ---- Float clearfix ---- */
 
   .clearfix::after {
     content: " ";
     display: table;
     clear: both;
+  }
+
+}
+
+
+
+@media (min-width: 1000px) {
+
+  .secondary,
+  .primary,
+  .tertiary {
+    float: left;
+    width: 33.333333%;
+    clear: none;
   }
 
 }
